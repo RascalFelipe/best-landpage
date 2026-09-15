@@ -554,7 +554,7 @@
   position: absolute;
   z-index: var(--fa-stack-z-index, auto);
 }
-</style><link rel="icon" href="http://localhost:8080/favicon.ico">
+</style><link rel="icon" href="./index_files/logo_mini_white.svg">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEST</title>
@@ -1472,6 +1472,244 @@ header span label[data-v-7ac51d15] {
     }
   }
 </style>
+<style id="login-drawer-styles">
+  body.login-drawer-open {
+    overflow: hidden;
+  }
+
+  .login-drawer-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+
+  .login-drawer-trigger svg {
+    width: 1em;
+  }
+
+  .login-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(8, 7, 8, 0.66);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 260ms ease, visibility 260ms ease;
+  }
+
+  .login-drawer-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .login-drawer {
+    position: fixed;
+    inset: 0 0 0 auto;
+    z-index: 10001;
+    display: flex;
+    width: min(430px, 100%);
+    height: 100dvh;
+    padding: clamp(24px, 5vw, 42px);
+    overflow-y: auto;
+    color: #f2f4f5;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(255, 189, 89, 0.14), transparent 42%),
+      #171516;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: -24px 0 64px rgba(0, 0, 0, 0.34);
+    transform: translateX(105%);
+    visibility: hidden;
+    transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), visibility 320ms ease;
+  }
+
+  .login-drawer.is-open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .login-drawer__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .login-drawer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  }
+
+  .login-drawer__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f2f4f5;
+    font-family: var(--bold-font);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .login-drawer__brand img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .login-drawer__close {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    place-items: center;
+    color: #f2f4f5;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+  }
+
+  .login-drawer__close:hover,
+  .login-drawer__close:focus-visible {
+    color: #1b191a;
+    background: #ffbd59;
+    border-color: #ffbd59;
+  }
+
+  .login-drawer__close svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .login-drawer__eyebrow {
+    margin-bottom: 8px;
+    color: #ffbd59;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .login-drawer h2 {
+    margin-bottom: 10px;
+    color: #f2f4f5;
+    font-family: var(--bold-font);
+    font-size: clamp(1.75rem, 5vw, 2.35rem);
+    font-weight: 800;
+    line-height: 1.12;
+  }
+
+  .login-drawer__intro {
+    margin-bottom: 28px;
+    color: #b8bdc1;
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .login-role-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .login-role-card {
+    display: grid;
+    grid-template-columns: 46px 1fr 20px;
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    color: #f2f4f5;
+    text-decoration: none;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+  }
+
+  .login-role-card:hover,
+  .login-role-card:focus-visible {
+    background: rgba(255, 189, 89, 0.09);
+    border-color: rgba(255, 189, 89, 0.64);
+    transform: translateX(-3px);
+  }
+
+  .login-role-card__icon {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    color: #1b191a;
+    background: #ffbd59;
+    border-radius: 13px;
+  }
+
+  .login-role-card__icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .login-role-card strong,
+  .login-role-card small {
+    display: block;
+  }
+
+  .login-role-card strong {
+    margin-bottom: 2px;
+    font-size: 0.98rem;
+    font-weight: 700;
+  }
+
+  .login-role-card small {
+    color: #b8bdc1;
+    font-size: 0.79rem;
+    line-height: 1.4;
+  }
+
+  .login-role-card__arrow {
+    color: #ffbd59;
+    font-size: 1.2rem;
+    transition: transform 180ms ease;
+  }
+
+  .login-role-card:hover .login-role-card__arrow,
+  .login-role-card:focus-visible .login-role-card__arrow {
+    transform: translateX(3px);
+  }
+
+  .login-drawer__footer {
+    margin-top: auto;
+    padding-top: 34px;
+    color: #7f8285;
+    font-size: 0.74rem;
+  }
+
+  @media (max-width: 520px) {
+    .login-drawer {
+      padding: 22px 18px;
+    }
+
+    .login-drawer__top {
+      margin-bottom: 34px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .login-drawer,
+    .login-drawer-backdrop,
+    .login-role-card,
+    .login-role-card__arrow {
+      transition: none;
+    }
+  }
+</style>
 </head>
   <body cz-shortcut-listen="true">
     <div id="app" data-v-app=""><main data-v-7a7a37b1=""><div data-v-7ac51d15="" data-v-7a7a37b1="" id="template"><nav data-v-c970699f="" data-v-7ac51d15="" id="header">
@@ -1482,7 +1720,7 @@ header span label[data-v-7ac51d15] {
                     <li data-v-c970699f="">Education <svg data-v-c970699f="" class="svg-inline--fa fa-chevron-down" data-prefix="fas" data-icon="chevron-down" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></li>
                     <li data-v-c970699f="">Solutions <svg data-v-c970699f="" class="svg-inline--fa fa-chevron-down" data-prefix="fas" data-icon="chevron-down" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></li>
                     <li data-v-c970699f="">Training <svg data-v-c970699f="" class="svg-inline--fa fa-chevron-down" data-prefix="fas" data-icon="chevron-down" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></li></ul>
-            <a data-v-c970699f="" class="header-link" href="http://localhost:8080/#"><svg data-v-c970699f="" class="svg-inline--fa fa-user" data-prefix="far" data-icon="user" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"></path></svg> Log in </a></div></nav>
+            <button data-v-c970699f="" class="header-link login-drawer-trigger" id="login-drawer-trigger" type="button" aria-controls="login-drawer" aria-expanded="false"><svg data-v-c970699f="" class="svg-inline--fa fa-user" data-prefix="far" data-icon="user" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"></path></svg> Log in </button></div></nav>
         <section data-v-7ac51d15="" id="presentation-content"><div data-v-7ac51d15="" class="content duo-container">
             <div data-v-7ac51d15=""><h1 data-v-7ac51d15="">Seu <marker data-v-7ac51d15="">objetivo</marker>, seu caminho.<br data-v-7ac51d15="">Você escolhe.<br data-v-7ac51d15="">A gente te guia.</h1><p data-v-7ac51d15=""> 
             Com a Metodologia Modular, escolhemos a abordagem mais adequada para o seu caso e transformamos o aprendizado em uma experiência que faz mais sentido para você, com foco prático, clareza de progressão e aplicação real. </p>
@@ -1600,6 +1838,82 @@ header span label[data-v-7ac51d15] {
 
       </div></main></div>
 
+<div class="login-drawer-backdrop" id="login-drawer-backdrop" aria-hidden="true"></div>
+
+<aside
+  class="login-drawer"
+  id="login-drawer"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-labelledby="login-drawer-title"
+  inert
+>
+  <div class="login-drawer__content">
+    <div class="login-drawer__top">
+      <span class="login-drawer__brand">
+        <img src="./index_files/logo_mini_white.svg" alt="">
+        BEST
+      </span>
+      <button class="login-drawer__close" id="login-drawer-close" type="button" aria-label="Close login menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <p class="login-drawer__eyebrow">BEST Hub</p>
+    <h2 id="login-drawer-title">Choose your access</h2>
+    <p class="login-drawer__intro">Select your profile to continue to the correct portal.</p>
+
+    <div class="login-role-list" aria-label="Login profiles">
+      <a class="login-role-card" href="https://best-progress-portal.felipe-sa-diniz1.chatgpt.site/?role=admin">
+        <span class="login-role-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </span>
+        <span>
+          <strong>Log in as admin</strong>
+          <small>Manage access and platform settings</small>
+        </span>
+        <span class="login-role-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="login-role-card" href="https://best-progress-portal.felipe-sa-diniz1.chatgpt.site/?role=teacher">
+        <span class="login-role-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 3h18v13H3z"></path>
+            <path d="m8 21 4-5 4 5M7 8h4M7 12h8"></path>
+          </svg>
+        </span>
+        <span>
+          <strong>Log in as teacher</strong>
+          <small>Manage students, classes and progress</small>
+        </span>
+        <span class="login-role-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="login-role-card" href="https://best-progress-portal.felipe-sa-diniz1.chatgpt.site/?role=student">
+        <span class="login-role-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m2 10 10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 2 9 2 12 0v-5M22 10v6"></path>
+          </svg>
+        </span>
+        <span>
+          <strong>Log in as student</strong>
+          <small>View your learning journey and progress</small>
+        </span>
+        <span class="login-role-card__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <p class="login-drawer__footer">Secure role-based access to the BEST Hub.</p>
+  </div>
+</aside>
+
 <a
   class="whatsapp-float"
   href="https://wa.me/5511999324853?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20BEST."
@@ -1615,6 +1929,71 @@ header span label[data-v-7ac51d15] {
       
     <!-- <script type="module" src="./index_files/main.ts"></script> -->
     <script defer>
+      (() => {
+        const trigger = document.getElementById("login-drawer-trigger");
+        const drawer = document.getElementById("login-drawer");
+        const backdrop = document.getElementById("login-drawer-backdrop");
+        const closeButton = document.getElementById("login-drawer-close");
+
+        if (!trigger || !drawer || !backdrop || !closeButton) {
+          return;
+        }
+
+        const setDrawerOpen = (isOpen) => {
+          trigger.setAttribute("aria-expanded", String(isOpen));
+          drawer.classList.toggle("is-open", isOpen);
+          backdrop.classList.toggle("is-open", isOpen);
+          backdrop.setAttribute("aria-hidden", String(!isOpen));
+          document.body.classList.toggle("login-drawer-open", isOpen);
+
+          if (isOpen) {
+            drawer.removeAttribute("inert");
+            drawer.setAttribute("aria-hidden", "false");
+            window.setTimeout(() => closeButton.focus(), 40);
+          } else {
+            trigger.focus();
+            drawer.setAttribute("aria-hidden", "true");
+            drawer.setAttribute("inert", "");
+          }
+        };
+
+        const openDrawer = () => setDrawerOpen(true);
+        const closeDrawer = () => setDrawerOpen(false);
+
+        trigger.addEventListener("click", openDrawer);
+        closeButton.addEventListener("click", closeDrawer);
+        backdrop.addEventListener("click", closeDrawer);
+
+        document.addEventListener("keydown", (event) => {
+          if (!drawer.classList.contains("is-open")) {
+            return;
+          }
+
+          if (event.key === "Escape") {
+            event.preventDefault();
+            closeDrawer();
+            return;
+          }
+
+          if (event.key !== "Tab") {
+            return;
+          }
+
+          const focusableElements = [...drawer.querySelectorAll("button, [href], [tabindex]:not([tabindex='-1'])")]
+            .filter((element) => !element.disabled && !element.closest("[inert]"));
+          const firstElement = focusableElements[0];
+          const lastElement = focusableElements[focusableElements.length - 1];
+
+          if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+          } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+          }
+        });
+      })();
+
       [...document.getElementById("form-container").getElementsByClassName("btn-group")[0].getElementsByTagName("button")].map(btn => btn.onclick = (e) => {
         [...e.target.parentNode.getElementsByTagName("button")].map(cbtn => cbtn.removeAttribute("active"));
         e.target.setAttribute("active", "true");
